@@ -20,6 +20,7 @@ function main(currentTime){
     gameEngine();
 }
 
+class Position {
 function isCollide(snake){
 
 
@@ -30,16 +31,16 @@ function isCollide(snake){
              }
         }
     // Столкновение змейки с границой игрового поля
-        if(snake[0].x > 10 || snake[0].x <= 0 || snake[0].y > 10 || snake[0].y <= 0){
+        if(snake[0].x > 10 || snake[0].x <= 0 || snake[0].y > 10 || snake[0].y < 0){
             return true;
     }
 }
 
 // Позиции еды от 1 до 10
-
-const updateFoodPosition = () => {
+ const updateFoodPosition = () => {
     food.x = Math.floor(Math.random() * 10) + 1;
     food.y = Math.floor(Math.random() * 10) + 1;
+}
 }
 
 function gameEngine(){
